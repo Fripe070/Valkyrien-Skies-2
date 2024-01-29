@@ -7,9 +7,9 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.Mixins;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
+import org.valkyrienskies.mod.compat.VSRenderer;
 import org.spongepowered.asm.service.MixinService;
 import org.valkyrienskies.mod.compat.LoadedMods;
-import org.valkyrienskies.mod.compat.VSRenderer;
 
 /**
  * Used to detect Optifine and apply/not apply Optifine compatible mixins
@@ -86,7 +86,6 @@ public class ValkyrienCommonMixinConfigPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("org.valkyrienskies.mod.mixin.feature.render_pathfinding")) {
             return PATH_FINDING_DEBUG;
         }
-
         if (mixinClassName.contains("org.valkyrienskies.mod.mixin.mod_compat.create.client.trackOutlines")) {
             //interactive has its own track outline stuff so disable fixed version of VS2's track outline stuff
             if (classExists("org.valkyrienskies.create_interactive.mixin.client.MixinTrackBlockOutline")) {
