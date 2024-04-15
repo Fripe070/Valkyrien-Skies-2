@@ -5,6 +5,7 @@
   "mixins": [
     "compat.create.MixinBlockBreakingKineticTileEntity",
     "compat.create.MixinBlocks",
+    "compat.create.MixinChuteBlockEntity",
     "compat.create.MixinControlledContraptionEntity",
     "compat.sodium.MixinRenderSectionManager",
     "feature.explosions.ClipContextMixin",
