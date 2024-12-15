@@ -34,23 +34,28 @@ class GameTickForceApplier : ShipForcesInducer {
     }
 
     fun applyInvariantForce(force: Vector3dc) {
-        invForces.add(force)
+        if (force.isFinite)
+            invForces.add(force)
     }
 
     fun applyInvariantTorque(torque: Vector3dc) {
-        invForces.add(torque)
+        if (torque.isFinite)
+            invForces.add(torque)
     }
 
     fun applyRotDependentForce(force: Vector3dc) {
-        invForces.add(force)
+        if (force.isFinite)
+            invForces.add(force)
     }
 
     fun applyRotDependentTorque(torque: Vector3dc) {
-        invForces.add(torque)
+        if (torque.isFinite)
+            invForces.add(torque)
     }
 
     fun applyInvariantForceToPos(force: Vector3dc, pos: Vector3dc) {
-        invPosForces.add(InvForceAtPos(force, pos))
+        if (force.isFinite)
+            invPosForces.add(InvForceAtPos(force, pos))
     }
 
     fun setStatic(b: Boolean) {
