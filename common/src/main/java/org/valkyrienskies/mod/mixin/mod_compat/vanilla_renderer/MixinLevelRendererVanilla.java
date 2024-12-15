@@ -57,9 +57,12 @@ public abstract class MixinLevelRendererVanilla implements LevelRendererVanillaD
     private final WeakHashMap<ClientShip, ObjectArrayList<RenderChunkInfo>> shipRenderChunks = new WeakHashMap<>();
     @Shadow
     private ClientLevel level;
+
     @Shadow
     @Final
+    @Mutable
     private ObjectArrayList<RenderChunkInfo> renderChunksInFrustum;
+
     @Shadow
     private @Nullable ViewArea viewArea;
     @Shadow
